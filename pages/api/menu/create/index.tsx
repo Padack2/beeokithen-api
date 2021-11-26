@@ -14,17 +14,8 @@ const CreateMenu = async (req: NextApiRequest, res: NextApiResponse) => {
 
             await fetch(process.env.NEXT_PUBLIC_API_URL + "/api/image-metadata-update", {
                 method: 'POST',
-                body: JSON.stringify({ storageRef: reqBody.image1.storageRef })
+                body: JSON.stringify({ storageRef: reqBody.image.storageRef })
             });
-            await fetch(process.env.NEXT_PUBLIC_API_URL + "/api/image-metadata-update", {
-                method: 'POST',
-                body: JSON.stringify({ storageRef: reqBody.image2.storageRef })
-            });
-            await fetch(process.env.NEXT_PUBLIC_API_URL + "/api/image-metadata-update", {
-                method: 'POST',
-                body: JSON.stringify({ storageRef: reqBody.image3.storageRef })
-            });
-
             res.status(200).json({ message: "success" });
 
         } catch (e) {

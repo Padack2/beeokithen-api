@@ -7,9 +7,7 @@ export type MenuDTO ={
     content1: string,
     content2: string,
     order: number,
-    image1: ImageBlock,
-    image2: ImageBlock,
-    image3: ImageBlock,
+    image: ImageBlock
 }
 
 export type MenuCatagoryDTO = {
