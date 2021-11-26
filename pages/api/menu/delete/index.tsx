@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { getFirestore, doc, deleteDoc } from "firebase/firestore";
 import firebase from '../../../../service/FirebaseConfig';
-import { MenuDelelteDTO } from "../../../../dto/menu-create.dto";
+import { MenuDelelteDTO } from "../../../../dto/menu.dto";
 
 const DeleteMenu = async (req: NextApiRequest, res: NextApiResponse) => {
     if (req.method === 'POST') {

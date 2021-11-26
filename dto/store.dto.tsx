@@ -1,4 +1,4 @@
-import { ImageBlock } from "./image-create.dto";
+import { ImageBlock } from "./image.dto";
 
 export type StoreDTO = {
     id: string,

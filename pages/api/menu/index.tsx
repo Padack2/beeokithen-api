@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { getFirestore, collection, getDocs, doc, query, where, orderBy } from "firebase/firestore";
 import firebase from '../../../service/FirebaseConfig';
-import { MenuDTO, MenuCatagoryDTO, MenusWithCatagoryDTO } from '../../../dto/menu-create.dto';
+import { MenuDTO, MenuCatagoryDTO, MenusWithCatagoryDTO } from '../../../dto/menu.dto';
 
 const GetMenuCatagoryAndMenuList = async (req: NextApiRequest, res: NextApiResponse) => {
   const firestore = getFirestore(firebase);

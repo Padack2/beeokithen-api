@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { getFirestore, collection, addDoc, getDocs } from "firebase/firestore";
 import firebase from '../../../service/FirebaseConfig';
-import { BannerDTO } from '../../../dto/banner-create.dto';
+import { BannerDTO } from '../../../dto/banner.dto';
 
 const GetBannerList = async (req: NextApiRequest, res: NextApiResponse<Array<BannerDTO>>) => {
     const firestore = getFirestore(firebase);

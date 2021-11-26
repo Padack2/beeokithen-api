@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { getFirestore, doc, setDoc, updateDoc, collection } from "firebase/firestore";
 import firebase from '../../../service/FirebaseConfig';
-import { NoticeModifyDTO } from "../../../dto/notice-create.dto";
+import { NoticeModifyDTO } from "../../../dto/notice.dto";
 
 const ModifyNotice = async (req: NextApiRequest, res: NextApiResponse) => {
     if (req.method === 'POST') {

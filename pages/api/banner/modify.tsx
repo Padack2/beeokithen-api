@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { getFirestore, doc, updateDoc } from "firebase/firestore";
 import firebase from '../../../service/FirebaseConfig';
-import { BannerDTO } from "../../../dto/banner-create.dto";
+import { BannerDTO } from "../../../dto/banner.dto";
 
 const ModifyBanner = async (req: NextApiRequest, res: NextApiResponse) => {
   const reqBody:BannerDTO = JSON.parse(req.body);

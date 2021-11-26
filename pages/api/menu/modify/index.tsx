@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { getFirestore, doc, setDoc, updateDoc, collection, getDoc } from "firebase/firestore";
 import firebase from '../../../../service/FirebaseConfig';
-import { MenuDTO } from "../../../../dto/menu-create.dto";
+import { MenuDTO } from "../../../../dto/menu.dto";
 
 const ModifyMenu = async (req: NextApiRequest, res: NextApiResponse) => {
     if (req.method === 'POST') {
@@ -11,10 +11,10 @@ const ModifyMenu = async (req: NextApiRequest, res: NextApiResponse) => {
             const newDocRef = doc(firestore, "Menu", reqBody.id); 
             const docData = await getDoc(newDocRef);
             const menuData = docData.data();    
-            await fetch(process.env.NEXT_PUBLIC_API_URL + "/api/image-metadata-update", {
-                method: 'POST',
-                body: JSON.stringify({ storageRef: reqBody.image.storageRef })
-            });
+            // await fetch(process.env.NEXT_PUBLIC_API_URL + "/api/image-metadata-update", {
+            //     method: 'POST',
+            //     body: JSON.stringify({ storageRef: reqBody.image.storageRef })
+            // });
 
             // if (menuData != undefined) {
             //     if(menuData.image.downloadUrl != reqBody.image.downloadUrl){

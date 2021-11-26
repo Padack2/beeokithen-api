@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { getFirestore, collection, addDoc, getDocs, query, orderBy } from "firebase/firestore";
 import firebase from '../../../service/FirebaseConfig';
-import { FaqDTO } from '../../../dto/faq-create.dto';
+import { FaqDTO } from '../../../dto/faq.dto';
 
 const GetFaqList = async (req: NextApiRequest, res: NextApiResponse<Array<FaqDTO>>) => {
     const firestore = getFirestore(firebase);

@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { getFirestore, doc, deleteDoc } from "firebase/firestore";
 import firebase from '../../../service/FirebaseConfig';
-import { StoreDeleteDTO } from "../../../dto/store-create.dto";
+import { StoreDeleteDTO } from "../../../dto/store.dto";
 
 const DeleteStore = async (req: NextApiRequest, res: NextApiResponse) => {
     if (req.method === 'POST') {

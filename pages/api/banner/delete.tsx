@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { getFirestore, doc, deleteDoc } from "firebase/firestore";
 import firebase from '../../../service/FirebaseConfig';
-import { BannerDeleteDTO } from "../../../dto/banner-create.dto";
+import { BannerDeleteDTO } from "../../../dto/banner.dto";
 
 const DeleteBanner = async (req: NextApiRequest, res: NextApiResponse) => {
     if (req.method === 'POST') {

@@ -1,4 +1,5 @@
-import { ImageBlock, TmpImageBlock } from './image-create.dto'
+
+import { ImageBlock, TmpImageBlock } from './image.dto'
 
 export interface BannerDTO extends ImageBlock {
     id: string

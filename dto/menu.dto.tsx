@@ -1,4 +1,4 @@
-import { ImageBlock } from "./image-create.dto";
+import { ImageBlock } from "./image.dto";
 
 export type MenuDTO ={
     id: string,
@@ -7,7 +7,9 @@ export type MenuDTO ={
     content1: string,
     content2: string,
     order: number,
-    image: ImageBlock
+    image1: ImageBlock,
+    image2: ImageBlock,
+    image3: ImageBlock,
 }
 
 export type MenuCatagoryDTO = {
